@@ -233,10 +233,8 @@ class Sync {
 
   needsRefresh (node) {
     if (node.common) {
-      if (!node.common.timestamp) {
-        return true;
-      }
-      return (this.now() - node.common.timestamp > config.syncInterval);
+      // Always allow refresh of node.
+      return true;
     }
     return false;
   }
