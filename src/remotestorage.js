@@ -777,9 +777,7 @@ RemoteStorage.prototype = {
 * @private
 */
 function isValidInterval(interval) {
-  return (typeof interval === 'number' &&
-          interval > 1000 &&
-          interval < 3600000);
+  return (typeof interval === 'number');
 }
 
 RemoteStorage.util = util;
